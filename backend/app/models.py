@@ -13,6 +13,7 @@ class Applicant(Base):
     phone_number = Column(String)
     date_of_birth = Column(Date)
     address = Column(String)
+    hashed_password = Column(String) # Added for authentication
 
     applications = relationship("LoanApplication", back_populates="applicant")
 
